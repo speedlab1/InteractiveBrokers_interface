@@ -48,6 +48,7 @@ class IBInterface(EWrapper, EClient):
         self.open_orders = {}
         self.open_positions = {}
         self.req_id = 0
+        self.account = account
         EWrapper.__init__(self)
         EClient.__init__(self, wrapper=self)
         self.connect(host, port, client_id)
@@ -300,6 +301,7 @@ class IBInterface(EWrapper, EClient):
             order.lmtPrice = price
         order.action = action
         order.totalQuantity = quantity
+        order.account = self.account
         print('Parent Order Quantity '+str(quantity))
         return order
 
@@ -329,6 +331,7 @@ class IBInterface(EWrapper, EClient):
             print('Take Profit Order Quantity :'+str(take_profit_order.totalQuantity))
             take_profit_order.tif = 'GTC'
             take_profit_order.ocaType = 1
+            take_profit_order.account = self.account
             take_profit_order.ocaGroup = contract.symbol+contract.currency + str(parent_id)
             total_orders.append(take_profit_order)
         if stop_loss_price !=0:
@@ -347,6 +350,7 @@ class IBInterface(EWrapper, EClient):
             print('Stop Loss Order Quantity :' + str(stop_loss_order.totalQuantity))
             stop_loss_order.tif = 'GTC'
             stop_loss_order.ocaType = 1
+            stop_loss_order.account = self.account
             stop_loss_order.ocaGroup = contract.symbol+contract.currency + str(parent_id)
             total_orders.append(stop_loss_order)
 
