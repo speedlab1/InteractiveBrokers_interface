@@ -212,7 +212,7 @@ class IBInterface(EWrapper, EClient):
         queue = self.wrapper_dict[EWrapper.historicalData.__name__+str(req_id)]
         while True:
             try:
-                z = queue.get(block=True)
+                z = queue.get(block=True,timeout=100)
                 if z != 'End':
                     data.append(z)
                 else:
