@@ -9,6 +9,7 @@ from datetime import datetime
 from multiprocessing import Queue
 from multiprocessing import queues
 from ibapi.commission_report import CommissionReport
+from ibapi.wrapper import TickerId
 import pandas as pd
 
 
@@ -70,6 +71,12 @@ class IBInterface(EWrapper, EClient):
 
 
     #*********** Wrapper Functions *********************#
+    def error(self, reqId:TickerId, errorCode:int, errorString:str):
+
+        print('############## ' + str(reqId) + ' : ' + str(errorCode) + ' : ' + str(errorString) + ' ###################')
+        if errorCode == 2107:
+            contract = self.create_contract("EURJPY", 'FX')
+            self.getHistoricalData(contract, '', '1 D', '60 min', 'ASK', 1, 1)
     def nextValidId(self, orderId: int):
 
         while self.wrapper_dict[EWrapper.nextValidId.__name__].qsize()>0:
@@ -108,8 +115,8 @@ class IBInterface(EWrapper, EClient):
         print('Historicla Data End')
         self.wrapper_dict[EWrapper.historicalData.__name__ + str(reqId)].put('End')
 
-    def historicalDataUpdate(self, reqId: int, bar: object):
-        wrapper_dict[EWrapper.historicalDataUpdate.__name__ + str(reqId)].put(bar)
+    # def historicalDataUpdate(self, reqId: int, bar: object):
+    #     wrapper_dict[EWrapper.historicalDataUpdate.__name__ + str(reqId)].put(bar)
 
     def openOrder(self, orderId:int, contract:Contract, order:Order,
                   orderState:object):
@@ -462,46 +469,46 @@ def store_historical_data_to_file(symbol, currency, data):
         print(data)
     store.close()
 
-def store_queue_to_file(queue,symbol,currency):
-
-            msg_array = []
-            times = []
-            while True:
-                try:
-                    t1 = time.time()
-                    now = datetime.now()
-                    msg = queue.get(block = True)
-                    msg_array.append(msg)
-                    times.append(time.time() - t1)
-                    if pd.to_datetime(msg['time'], unit='s').second == 55:
-                        break
-
-
-                except queues.Empty:
-                    break
-            data_dict_array = []
-            if len(msg_array) > 1:
-                for msg in msg_array:
-                    data_dict = {}
-                    for key in KEYS:
-                        data_dict[key] = msg[key]
-                    data_dict_array.append(data_dict)
-
-                dataframe = pd.DataFrame(data=data_dict_array)
-                dataframe['time'] = pd.to_datetime(dataframe['time'], unit='s')
-
-
-                dataframe = dataframe.set_index(pd.to_datetime(dataframe['time']))
-                dataframe = dataframe.drop('time', axis=1)
-                print(dataframe.index)
-
-                store = pd.HDFStore('tick_data' + symbol + currency + '.h5')
-                store.open()
-                print('Store ' + symbol + currency + ' was written with length ' + str(len(dataframe)))
-                # print(dataframe)
-                store.append(symbol + currency, dataframe, format='t')
-
-                store.close()
+# def store_queue_to_file(queue,symbol,currency):
+#
+#             msg_array = []
+#             times = []
+#             while True:
+#                 try:
+#                     t1 = time.time()
+#                     now = datetime.now()
+#                     msg = queue.get(block = True)
+#                     msg_array.append(msg)
+#                     times.append(time.time() - t1)
+#                     if pd.to_datetime(msg['time'], unit='s').second == 55:
+#                         break
+#
+#
+#                 except queues.Empty:
+#                     break
+#             data_dict_array = []
+#             if len(msg_array) > 1:
+#                 for msg in msg_array:
+#                     data_dict = {}
+#                     for key in KEYS:
+#                         data_dict[key] = msg[key]
+#                     data_dict_array.append(data_dict)
+#
+#                 dataframe = pd.DataFrame(data=data_dict_array)
+#                 dataframe['time'] = pd.to_datetime(dataframe['time'], unit='s')
+#
+#
+#                 dataframe = dataframe.set_index(pd.to_datetime(dataframe['time']))
+#                 dataframe = dataframe.drop('time', axis=1)
+#                 print(dataframe.index)
+#
+#                 store = pd.HDFStore('tick_data' + symbol + currency + '.h5')
+#                 store.open()
+#                 print('Store ' + symbol + currency + ' was written with length ' + str(len(dataframe)))
+#                 # print(dataframe)
+#                 store.append(symbol + currency, dataframe, format='t')
+#
+#                 store.close()
 
 # def set_open_orders(orders):
 #     for order in orders:
