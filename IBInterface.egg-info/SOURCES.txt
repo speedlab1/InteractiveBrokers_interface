@@ -1,0 +1,6 @@
+setup.py
+IBInterface.egg-info/PKG-INFO
+IBInterface.egg-info/SOURCES.txt
+IBInterface.egg-info/dependency_links.txt
+IBInterface.egg-info/top_level.txt
+ib_interface/ib.py

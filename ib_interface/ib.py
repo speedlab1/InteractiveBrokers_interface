@@ -76,7 +76,7 @@ class IBInterface(EWrapper, EClient):
         print('############## ' + str(reqId) + ' : ' + str(errorCode) + ' : ' + str(errorString) + ' ###################')
         if errorCode == 2107:
             contract = self.create_contract("EURJPY", 'FX')
-            self.getHistoricalData(contract, '', '1 D', '60 min', 'ASK', 1, 1)
+            self.getHistoricalData(contract, '', '1 D', '30 mins', 'ASK', 1, 1)
     def nextValidId(self, orderId: int):
 
         while self.wrapper_dict[EWrapper.nextValidId.__name__].qsize()>0:
@@ -122,6 +122,7 @@ class IBInterface(EWrapper, EClient):
                   orderState:object):
         data_dict ={}
         data_dict['orderId'] = orderId
+        print('Order open with orderID : '+str(orderId) + " for contract : "+str(contract.symbol)+str(contract.currency))
         data_dict['contract'] = contract
         data_dict['order'] = order
         data_dict['orderState']  =orderState
@@ -193,8 +194,16 @@ class IBInterface(EWrapper, EClient):
 
     def reqIds(self):
         super().reqIds(-1)
+        sleep(0.5)
         queue = self.wrapper_dict[EWrapper.nextValidId.__name__]
-        id = queue.get(block=True)
+        print("Testing ReqID")
+        try:
+            if queue.qsize()>0:
+                id = queue.get(block=True,timeout=5)
+            else:
+                id =0
+        except queues.Empty:
+            id = 0
         return id
 
     def reqRealTimeBars(self, contract, barSize,
@@ -236,10 +245,16 @@ class IBInterface(EWrapper, EClient):
 
         queue = self.wrapper_dict[EWrapper.openOrder.__name__]
         data = []
-        for i in range(queue.qsize()):
-                data.append(queue.get(block=False))
-        orders = self.set_open_orders(data)
+        print('At open Orders, queue size : '+str(queue.qsize()))
+        try:
 
+            for i in range(queue.qsize()):
+            #TODO: Sometimes this will fail with queue.Empty
+                data.append(queue.get(block=False))
+            orders = self.set_open_orders(data)
+        except queues.Empty:
+            orders = []
+            print("Queue Empty")
 
         return orders
     def getRealTimeHistoricalData(self,contract,end_date_time,duration_string,bar_size_setting, what_to_show,userth,format_date,keep_up_to_date = True):
@@ -270,9 +285,16 @@ class IBInterface(EWrapper, EClient):
         queue = self.wrapper_dict[EWrapper.updatePortfolio.__name__]
 
         data = []
-        for i in range(queue.qsize()):
-            data.append(queue.get(block=False))
-        positions = self.set_open_positions(data)
+        try:
+
+            for i in range(queue.qsize()):
+                data.append(queue.get(block=False))
+            positions = self.set_open_positions(data)
+        except queues.Empty:
+            positions = {}
+            print("Queue Empty")
+
+
 
 
         return positions
@@ -396,6 +418,7 @@ class IBInterface(EWrapper, EClient):
             take_profit_order.totalQuantity = limit_orders_lot
             take_profit_order.tif = 'GTC'
             take_profit_order.ocaType = 1
+            take_profit_order.account = self.account
             take_profit_order.ocaGroup = contract.symbol+contract.currency  + str(parent_id)
             total_orders.append(take_profit_order)
         if stop_loss_price !=0:
@@ -413,6 +436,7 @@ class IBInterface(EWrapper, EClient):
             stop_loss_order.totalQuantity = limit_orders_lot
             stop_loss_order.tif = 'GTC'
             stop_loss_order.ocaType = 1
+            stop_loss_order.account = self.account
             stop_loss_order.ocaGroup = contract.symbol+contract.currency + str(parent_id)
             total_orders.append(stop_loss_order)
         orders = self.getOpenOrders()
