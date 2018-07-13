@@ -19,7 +19,9 @@ contract_dict = {"EURUSD" :("EUR",'USD'), 'EURGBP': ('EUR','GBP'), 'EURJPY': ('E
                  "CHFJPY": ("CHF",'JPY'),'CADJPY':('CAD','JPY'),'AUDJPY':('AUD','JPY'), 'NZDJPY':('NZD','JPY'),
                  'CADCHF':('CAD','CHF'), 'AUDCHF':( 'AUD','CHF'),'NZDCHF':('NZD','CHF'),
                  'AUDCAD':('AUD','CAD'), 'AUDNZD':('AUD','NZD'),
-                 'NZDCAD':('NZD','CAD')}
+                 'NZDCAD':('NZD','CAD'),
+                 'USDSEK': ('USD','SEK'), 'USDRUB': ('USD','RUB'), 'USDNOK': ('USD','NOK'), 'USDMXN': ('USD','MXN'), 'USDDKK': ('USD','DKK'), 'USDCNH': ('USD','CNH'),
+                 }
 futures_dict = {'ZF':('ZF','USD','ECBOT','20171229','1000'),'ZB':('ZB','USD','ECBOT','20171219','1000'),'ZN':('ZN','USD','ECBOT','20171219','1000'),
            'BTP': ('BTP', 'EUR', 'DTB', '20171207', '1000'),'GBL':('GBL','EUR','DTB','20171207','1000'),'GBM':('GBM','EUR','DTB','20171207','1000'),
            'OAT': ('OAT', 'EUR', 'DTB', '20171207', '1000')}
