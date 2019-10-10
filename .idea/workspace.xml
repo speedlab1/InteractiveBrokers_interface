@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ef6cbb1f-1bec-478d-9092-21ec2f3a122a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ib_interface/ib.py" afterPath="$PROJECT_DIR$/ib_interface/ib.py" />
+      <change beforePath="$PROJECT_DIR$/.idea/IBInterface.iml" afterPath="$PROJECT_DIR$/.idea/IBInterface.iml" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,7 +16,6 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="IBInterface" />
   </component>
@@ -24,34 +24,14 @@
       <file leaf-file-name="queues.py" pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/AppData/Local/Continuum/Anaconda3/Lib/multiprocessing/queues.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1598">
+            <state relative-caret-position="1649">
               <caret line="110" column="0" lean-forward="false" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="client.py" pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/AppData/Local/Continuum/Anaconda3/Lib/site-packages/ibapi-9.73.2-py3.5.egg!/ibapi/client.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21029">
-              <caret line="1252" column="8" lean-forward="false" selection-start-line="1252" selection-start-column="8" selection-end-line="1252" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="connection.py" pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/AppData/Local/Continuum/Anaconda3/Lib/site-packages/ibapi-9.73.2-py3.5.egg!/ibapi/connection.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1360">
-              <caret line="85" column="0" lean-forward="false" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_pydev_execfile.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="_pydev_execfile.py" pinned="false" current-in-tab="true">
         <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="289">
@@ -61,31 +41,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="order.py" pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/AppData/Local/Continuum/Anaconda3/Lib/site-packages/ibapi-9.73.2-py3.5.egg!/ibapi/order.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="31" column="13" lean-forward="false" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ib.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ib.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ib_interface/ib.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="487">
-              <caret line="571" column="60" lean-forward="true" selection-start-line="571" selection-start-column="60" selection-end-line="571" selection-end-column="60" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="builtins.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.PyCharmCE2016.3/system/python_stubs/-80525272/builtins.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46631">
-              <caret line="2743" column="6" lean-forward="false" selection-start-line="2743" selection-start-column="6" selection-end-line="2743" selection-end-column="6" />
+            <state relative-caret-position="6902">
+              <caret line="571" column="25" lean-forward="false" selection-start-line="571" selection-start-column="25" selection-end-line="571" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -165,39 +125,12 @@
     <panes>
       <pane id="Scope" />
       <pane id="Scratches" />
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IBInterface" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IBInterface" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IBInterface" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IBInterface" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ib_interface" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../User/AppData/Local/GitHub/PortableGit_d7effa1a4a322478cd29c826b52a0c118ad3db11/mingw32/bin/git.exe" />
+    <property name="last_opened_file_path" value="C:/../User/AppData/Local/GitHub/PortableGit_d7effa1a4a322478cd29c826b52a0c118ad3db11/mingw32/bin/git.exe" />
     <property name="SearchEverywhereHistoryKey" value="reqIds&#9;null&#9;null" />
     <property name="ignore_missing_gitignore" value="true" />
   </component>
@@ -206,25 +139,20 @@
       <recent name="C:\Users\sc\PycharmProjects\IBInterface" />
     </key>
   </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
   <component name="RunManager" selected="Python.ib (1)">
-    <configuration default="false" name="ib" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/IBInterface/ib_interface" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="IBInterface" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/IBInterface/ib_interface/ib.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="ib (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="ib (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -239,7 +167,26 @@
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ib_interface/ib.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="ib" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/IBInterface/ib_interface" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="IBInterface" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/IBInterface/ib_interface/ib.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
     </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -403,26 +350,26 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17544784" sideWeight="0.496208" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49729145" sideWeight="0.56322443" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49729145" sideWeight="0.43677557" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.49789253" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997833" sideWeight="0.43466806" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24815595" sideWeight="0.503792" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.49729145" sideWeight="0.43677557" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997833" sideWeight="0.43466806" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -457,30 +404,9 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$USER_HOME$/AppData/Local/Continuum/Anaconda3/Lib/site-packages/ibapi-9.73.2-py3.5.egg!/ibapi/connection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1292">
-          <caret line="81" column="0" lean-forward="false" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/AppData/Local/Continuum/Anaconda3/Lib/site-packages/ibapi-9.73.2-py3.5.egg!/ibapi/wrapper.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="34" column="6" lean-forward="false" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/AppData/Local/Continuum/Anaconda3/Lib/site-packages/ibapi-9.73.2-py3.5.egg!/ibapi/client.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3570">
-          <caret line="225" column="36" lean-forward="false" selection-start-line="225" selection-start-column="36" selection-end-line="225" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$USER_HOME$/AppData/Local/Continuum/Anaconda3/Lib/site-packages/ibapi-9.73.2-py3.5.egg!/ibapi/connection.py" />
+    <entry file="jar://$USER_HOME$/AppData/Local/Continuum/Anaconda3/Lib/site-packages/ibapi-9.73.2-py3.5.egg!/ibapi/wrapper.py" />
+    <entry file="jar://$USER_HOME$/AppData/Local/Continuum/Anaconda3/Lib/site-packages/ibapi-9.73.2-py3.5.egg!/ibapi/client.py" />
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -505,30 +431,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/AppData/Local/Continuum/Anaconda3/Lib/site-packages/ibapi-9.73.2-py3.5.egg!/ibapi/connection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1292">
-          <caret line="81" column="0" lean-forward="false" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/AppData/Local/Continuum/Anaconda3/Lib/site-packages/ibapi-9.73.2-py3.5.egg!/ibapi/wrapper.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="34" column="6" lean-forward="false" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/AppData/Local/Continuum/Anaconda3/Lib/site-packages/ibapi-9.73.2-py3.5.egg!/ibapi/client.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3570">
-          <caret line="225" column="36" lean-forward="false" selection-start-line="225" selection-start-column="36" selection-end-line="225" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$USER_HOME$/AppData/Local/Continuum/Anaconda3/Lib/site-packages/ibapi-9.73.2-py3.5.egg!/ibapi/connection.py" />
+    <entry file="jar://$USER_HOME$/AppData/Local/Continuum/Anaconda3/Lib/site-packages/ibapi-9.73.2-py3.5.egg!/ibapi/wrapper.py" />
+    <entry file="jar://$USER_HOME$/AppData/Local/Continuum/Anaconda3/Lib/site-packages/ibapi-9.73.2-py3.5.egg!/ibapi/client.py" />
     <entry file="file://$PROJECT_DIR$/ib_interface/ib.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -545,30 +450,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/AppData/Local/Continuum/Anaconda3/Lib/site-packages/ibapi-9.73.2-py3.5.egg!/ibapi/connection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1292">
-          <caret line="81" column="0" lean-forward="false" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/AppData/Local/Continuum/Anaconda3/Lib/site-packages/ibapi-9.73.2-py3.5.egg!/ibapi/wrapper.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="34" column="6" lean-forward="false" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/AppData/Local/Continuum/Anaconda3/Lib/site-packages/ibapi-9.73.2-py3.5.egg!/ibapi/client.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3570">
-          <caret line="225" column="36" lean-forward="false" selection-start-line="225" selection-start-column="36" selection-end-line="225" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$USER_HOME$/AppData/Local/Continuum/Anaconda3/Lib/site-packages/ibapi-9.73.2-py3.5.egg!/ibapi/connection.py" />
+    <entry file="jar://$USER_HOME$/AppData/Local/Continuum/Anaconda3/Lib/site-packages/ibapi-9.73.2-py3.5.egg!/ibapi/wrapper.py" />
+    <entry file="jar://$USER_HOME$/AppData/Local/Continuum/Anaconda3/Lib/site-packages/ibapi-9.73.2-py3.5.egg!/ibapi/client.py" />
     <entry file="file://$PROJECT_DIR$/ib_interface/ib.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -585,30 +469,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/AppData/Local/Continuum/Anaconda3/Lib/site-packages/ibapi-9.73.2-py3.5.egg!/ibapi/connection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1292">
-          <caret line="81" column="0" lean-forward="false" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/AppData/Local/Continuum/Anaconda3/Lib/site-packages/ibapi-9.73.2-py3.5.egg!/ibapi/wrapper.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="34" column="6" lean-forward="false" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/AppData/Local/Continuum/Anaconda3/Lib/site-packages/ibapi-9.73.2-py3.5.egg!/ibapi/client.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3570">
-          <caret line="225" column="36" lean-forward="false" selection-start-line="225" selection-start-column="36" selection-end-line="225" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$USER_HOME$/AppData/Local/Continuum/Anaconda3/Lib/site-packages/ibapi-9.73.2-py3.5.egg!/ibapi/connection.py" />
+    <entry file="jar://$USER_HOME$/AppData/Local/Continuum/Anaconda3/Lib/site-packages/ibapi-9.73.2-py3.5.egg!/ibapi/wrapper.py" />
+    <entry file="jar://$USER_HOME$/AppData/Local/Continuum/Anaconda3/Lib/site-packages/ibapi-9.73.2-py3.5.egg!/ibapi/client.py" />
     <entry file="file://$PROJECT_DIR$/ib_interface/ib.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -625,30 +488,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/AppData/Local/Continuum/Anaconda3/Lib/site-packages/ibapi-9.73.2-py3.5.egg!/ibapi/connection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1292">
-          <caret line="81" column="0" lean-forward="false" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/AppData/Local/Continuum/Anaconda3/Lib/site-packages/ibapi-9.73.2-py3.5.egg!/ibapi/wrapper.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="34" column="6" lean-forward="false" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/AppData/Local/Continuum/Anaconda3/Lib/site-packages/ibapi-9.73.2-py3.5.egg!/ibapi/client.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3570">
-          <caret line="225" column="36" lean-forward="false" selection-start-line="225" selection-start-column="36" selection-end-line="225" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$USER_HOME$/AppData/Local/Continuum/Anaconda3/Lib/site-packages/ibapi-9.73.2-py3.5.egg!/ibapi/connection.py" />
+    <entry file="jar://$USER_HOME$/AppData/Local/Continuum/Anaconda3/Lib/site-packages/ibapi-9.73.2-py3.5.egg!/ibapi/wrapper.py" />
+    <entry file="jar://$USER_HOME$/AppData/Local/Continuum/Anaconda3/Lib/site-packages/ibapi-9.73.2-py3.5.egg!/ibapi/client.py" />
     <entry file="file://$PROJECT_DIR$/ib_interface/ib.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -657,22 +499,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/AppData/Local/Continuum/Anaconda3/Lib/site-packages/ibapi-9.73.2-py3.5.egg!/ibapi/wrapper.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="34" column="6" lean-forward="false" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/AppData/Local/Continuum/Anaconda3/Lib/site-packages/ibapi-9.73.2-py3.5.egg!/ibapi/client.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3570">
-          <caret line="225" column="36" lean-forward="false" selection-start-line="225" selection-start-column="36" selection-end-line="225" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$USER_HOME$/AppData/Local/Continuum/Anaconda3/Lib/site-packages/ibapi-9.73.2-py3.5.egg!/ibapi/wrapper.py" />
+    <entry file="jar://$USER_HOME$/AppData/Local/Continuum/Anaconda3/Lib/site-packages/ibapi-9.73.2-py3.5.egg!/ibapi/client.py" />
     <entry file="file://$PROJECT_DIR$/ib_interface/ib.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -681,22 +509,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/AppData/Local/Continuum/Anaconda3/Lib/site-packages/ibapi-9.73.2-py3.5.egg!/ibapi/wrapper.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="34" column="6" lean-forward="false" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/AppData/Local/Continuum/Anaconda3/Lib/site-packages/ibapi-9.73.2-py3.5.egg!/ibapi/client.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3570">
-          <caret line="225" column="36" lean-forward="false" selection-start-line="225" selection-start-column="36" selection-end-line="225" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$USER_HOME$/AppData/Local/Continuum/Anaconda3/Lib/site-packages/ibapi-9.73.2-py3.5.egg!/ibapi/wrapper.py" />
+    <entry file="jar://$USER_HOME$/AppData/Local/Continuum/Anaconda3/Lib/site-packages/ibapi-9.73.2-py3.5.egg!/ibapi/client.py" />
     <entry file="file://$PROJECT_DIR$/ib_interface/ib.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -705,22 +519,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/AppData/Local/Continuum/Anaconda3/Lib/site-packages/ibapi-9.73.2-py3.5.egg!/ibapi/wrapper.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="34" column="6" lean-forward="false" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/AppData/Local/Continuum/Anaconda3/Lib/site-packages/ibapi-9.73.2-py3.5.egg!/ibapi/client.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3570">
-          <caret line="225" column="36" lean-forward="false" selection-start-line="225" selection-start-column="36" selection-end-line="225" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$USER_HOME$/AppData/Local/Continuum/Anaconda3/Lib/site-packages/ibapi-9.73.2-py3.5.egg!/ibapi/wrapper.py" />
+    <entry file="jar://$USER_HOME$/AppData/Local/Continuum/Anaconda3/Lib/site-packages/ibapi-9.73.2-py3.5.egg!/ibapi/client.py" />
     <entry file="file://$PROJECT_DIR$/ib_interface/ib.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -729,22 +529,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/AppData/Local/Continuum/Anaconda3/Lib/site-packages/ibapi-9.73.2-py3.5.egg!/ibapi/wrapper.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="34" column="6" lean-forward="false" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/AppData/Local/Continuum/Anaconda3/Lib/site-packages/ibapi-9.73.2-py3.5.egg!/ibapi/client.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3570">
-          <caret line="225" column="36" lean-forward="false" selection-start-line="225" selection-start-column="36" selection-end-line="225" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$USER_HOME$/AppData/Local/Continuum/Anaconda3/Lib/site-packages/ibapi-9.73.2-py3.5.egg!/ibapi/wrapper.py" />
+    <entry file="jar://$USER_HOME$/AppData/Local/Continuum/Anaconda3/Lib/site-packages/ibapi-9.73.2-py3.5.egg!/ibapi/client.py" />
     <entry file="file://$PROJECT_DIR$/ib_interface/ib.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -753,38 +539,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/AppData/Local/Continuum/Anaconda3/Lib/site-packages/ibapi-9.73.2-py3.5.egg!/ibapi/wrapper.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="34" column="6" lean-forward="false" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/AppData/Local/Continuum/Anaconda3/Lib/site-packages/ibapi-9.73.2-py3.5.egg!/ibapi/client.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3570">
-          <caret line="225" column="36" lean-forward="false" selection-start-line="225" selection-start-column="36" selection-end-line="225" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/AppData/Local/Continuum/Anaconda3/Lib/site-packages/ibapi-9.73.2-py3.5.egg!/ibapi/wrapper.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="321" column="0" lean-forward="false" selection-start-line="321" selection-start-column="0" selection-end-line="322" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/AppData/Local/Continuum/Anaconda3/Lib/site-packages/ibapi-9.73.2-py3.5.egg!/ibapi/common.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-590">
-          <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$USER_HOME$/AppData/Local/Continuum/Anaconda3/Lib/site-packages/ibapi-9.73.2-py3.5.egg!/ibapi/wrapper.py" />
+    <entry file="jar://$USER_HOME$/AppData/Local/Continuum/Anaconda3/Lib/site-packages/ibapi-9.73.2-py3.5.egg!/ibapi/client.py" />
+    <entry file="jar://$USER_HOME$/AppData/Local/Continuum/Anaconda3/Lib/site-packages/ibapi-9.73.2-py3.5.egg!/ibapi/wrapper.py" />
+    <entry file="jar://$USER_HOME$/AppData/Local/Continuum/Anaconda3/Lib/site-packages/ibapi-9.73.2-py3.5.egg!/ibapi/common.py" />
     <entry file="file://$USER_HOME$/AppData/Local/Continuum/Anaconda3/Lib/site-packages/pandas/core/frame.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
@@ -792,26 +550,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/AppData/Local/Continuum/Anaconda3/Lib/site-packages/ibapi-9.73.2-py3.5.egg!/ibapi/connection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1360">
-          <caret line="85" column="0" lean-forward="false" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$USER_HOME$/AppData/Local/Continuum/Anaconda3/Lib/site-packages/ibapi-9.73.2-py3.5.egg!/ibapi/connection.py" />
     <entry file="file://$USER_HOME$/AppData/Local/Continuum/Anaconda3/Lib/multiprocessing/queues.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1598">
+        <state relative-caret-position="1649">
           <caret line="110" column="0" lean-forward="false" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -825,34 +568,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/AppData/Local/Continuum/Anaconda3/Lib/site-packages/ibapi-9.73.2-py3.5.egg!/ibapi/order.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="31" column="13" lean-forward="false" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharmCE2016.3/system/python_stubs/-80525272/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46631">
-          <caret line="2743" column="6" lean-forward="false" selection-start-line="2743" selection-start-column="6" selection-end-line="2743" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/AppData/Local/Continuum/Anaconda3/Lib/site-packages/ibapi-9.73.2-py3.5.egg!/ibapi/client.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21029">
-          <caret line="1252" column="8" lean-forward="false" selection-start-line="1252" selection-start-column="8" selection-end-line="1252" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$USER_HOME$/AppData/Local/Continuum/Anaconda3/Lib/site-packages/ibapi-9.73.2-py3.5.egg!/ibapi/order.py" />
+    <entry file="file://$USER_HOME$/.PyCharmCE2016.3/system/python_stubs/-80525272/builtins.py" />
+    <entry file="jar://$USER_HOME$/AppData/Local/Continuum/Anaconda3/Lib/site-packages/ibapi-9.73.2-py3.5.egg!/ibapi/client.py" />
     <entry file="file://$PROJECT_DIR$/ib_interface/ib.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="487">
-          <caret line="571" column="60" lean-forward="true" selection-start-line="571" selection-start-column="60" selection-end-line="571" selection-end-column="60" />
+        <state relative-caret-position="6902">
+          <caret line="571" column="25" lean-forward="false" selection-start-line="571" selection-start-column="25" selection-end-line="571" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
       </provider>

@@ -22,9 +22,13 @@ contract_dict = {"EURUSD" :("EUR",'USD'), 'EURGBP': ('EUR','GBP'), 'EURJPY': ('E
                  'NZDCAD':('NZD','CAD'),
                  'USDSEK': ('USD','SEK'), 'USDRUB': ('USD','RUB'), 'USDNOK': ('USD','NOK'), 'USDMXN': ('USD','MXN'), 'USDDKK': ('USD','DKK'), 'USDCNH': ('USD','CNH'),
                  }
-futures_dict = {'ZF':('ZF','USD','ECBOT','20171229','1000'),'ZB':('ZB','USD','ECBOT','20171219','1000'),'ZN':('ZN','USD','ECBOT','20171219','1000'),
-           'BTP': ('BTP', 'EUR', 'DTB', '20171207', '1000'),'GBL':('GBL','EUR','DTB','20171207','1000'),'GBM':('GBM','EUR','DTB','20171207','1000'),
-           'OAT': ('OAT', 'EUR', 'DTB', '20171207', '1000')}
+futures_dict = {'ZF':('ZF','USD','ECBOT','20190628','1000'),'ZB':('ZB','USD','ECBOT','20190619','1000'),'ZN':('ZN','USD','ECBOT','20190619','1000'),
+           'BTP': ('BTP', 'EUR', 'DTB', '20190606', '1000'),'GBL':('GBL','EUR','DTB','20190606','1000'),'GBM':('GBM','EUR','DTB','20190606','1000'),
+           'OAT': ('OAT', 'EUR', 'DTB', '20190606', '1000'),
+                'ES':('ES','USD','GLOBEX_IND','20190621','50'),'NQ':('NQ','USD','GLOBEX_IND','20190621','20'),
+                'DESX5': ('DESX5', 'EUR', 'DTB', '20191220', '100'),'YM': ('YM', 'USD', 'ECBOT', '20190621', '5'),
+                'Z': ('Z', 'GBP', 'ICEEU', '20190621', '1000'),'SMI': ('SMI', 'CHF', 'SOFFEX', '20190621', '10'),
+                'R': ('R', 'GBP', 'ICEEU', '20190626', '1000')}
 
 KEYS = ['time','open','high','low','close']
 
@@ -128,12 +132,13 @@ class IBInterface(EWrapper, EClient):
         data_dict['contract'] = contract
         data_dict['order'] = order
         data_dict['orderState']  =orderState
+        print(f'Order ID : {order.orderId}, action : {order.action}, type : {order.orderType}, quantity : {order.totalQuantity}, price : {order.lmtPrice}')
         self.wrapper_dict[EWrapper.openOrder.__name__].put(data_dict)
 
     def orderStatus(self, orderId:int , status:str, filled:float,
                     remaining:float, avgFillPrice:float, permId:int,
                     parentId:int, lastFillPrice:float, clientId:int,
-                    whyHeld:str):
+                    whyHeld:str,mktCapPrice:float):
         data_dict = {}
         data_dict['status'] = status
         data_dict['filled'] = filled
@@ -144,6 +149,8 @@ class IBInterface(EWrapper, EClient):
         data_dict['lastFillPrice'] = lastFillPrice
         data_dict['clientId'] = clientId
         data_dict['whyHeld'] = whyHeld
+        data_dict['mktCapPrice'] = mktCapPrice
+
         self.wrapper_dict[EWrapper.orderStatus.__name__].put(data_dict)
 
     def updatePortfolio(self, contract:Contract, position:float,
@@ -244,10 +251,29 @@ class IBInterface(EWrapper, EClient):
 
 
     def getOpenOrders(self):
+        super().reqOpenOrders()
+        queue = self.wrapper_dict[EWrapper.openOrder.__name__]
 
+        data = []
+        orders = []
+        print('At open Orders, queue size : '+str(queue.qsize()))
+        try:
+
+            for i in range(queue.qsize()):
+            #TODO: Sometimes this will fail with queue.Empty
+                data.append(queue.get(block=False))
+            orders = self.set_open_orders(data)
+        except queues.Empty:
+            orders = []
+            print("Queue Empty")
+
+        return orders
+    def getAllOpenOrders(self):
+        super().reqAllOpenOrders()
         queue = self.wrapper_dict[EWrapper.openOrder.__name__]
         data = []
-        print('At open Orders, queue size : '+str(queue.qsize()))
+        sleep(1)
+        print('At all open Orders, queue size : '+str(queue.qsize()))
         try:
 
             for i in range(queue.qsize()):
@@ -330,20 +356,21 @@ class IBInterface(EWrapper, EClient):
         order.orderType = type
         if type != 'MKT':
             order.lmtPrice = price
+            order.tif = 'GTC'
         order.action = action
         order.totalQuantity = quantity
         order.account = self.account
         print('Parent Order Quantity '+str(quantity))
         return order
 
-    def sell(self,quantity,contract,open_position,take_profit_price=0,stop_loss_price=0,limit_orders_lot=0,is_combined=False,reduce_lot = False):
+    def sell(self,quantity,contract,open_position,take_profit_price=0,stop_loss_price=0,limit_orders_lot=0,is_combined=False,reduce_lot = False,order_type = 'MKT',price =0):
         total_orders = []
         parent_id = self.reqIds()
         sleep(0.7)
         print('Apo to sell to ID einai : '+str(parent_id))
         other_id = parent_id
 
-        order= self.create_order('SELL',quantity+abs(open_position),'MKT')
+        order= self.create_order('SELL',quantity+abs(open_position),order_type,price=price)
         order.orderId = parent_id
         total_orders.append(order)
         if take_profit_price!= 0:
@@ -396,13 +423,13 @@ class IBInterface(EWrapper, EClient):
 
         return self.wrapper_dict[EWrapper.openOrder.__name__], self.wrapper_dict[EWrapper.orderStatus.__name__]
 
-    def buy(self,quantity,contract,open_position,take_profit_price=0,stop_loss_price=0,limit_orders_lot=0, is_combined=False,reduce_lot = False):
+    def buy(self,quantity,contract,open_position,take_profit_price=0,stop_loss_price=0,limit_orders_lot=0, is_combined=False,reduce_lot = False,order_type = 'MKT',price =0):
         total_orders = []
         parent_id = self.reqIds()
         sleep(0.7)
         print('Apo to buy to ID einai : ' + str(parent_id))
         other_id = parent_id
-        order= self.create_order('BUY',quantity+abs(open_position),'MKT')
+        order= self.create_order('BUY',quantity+abs(open_position),order_type,price=price)
         order.orderId = parent_id
         total_orders.append(order)
         if take_profit_price!= 0:
@@ -454,11 +481,12 @@ class IBInterface(EWrapper, EClient):
 
     def set_open_positions(self,queue_positions):
         for order in queue_positions:
-            self.open_positions[order['contract'].symbol+ order['contract'].currency] = order['position']
+            self.open_positions[order['contract'].symbol+ order['contract'].currency] = dict(position=order['position'],unrealizedPNL= order['unrealizedPNL'])
 
         return self.open_positions
 
     def set_open_orders(self,queue_orders):
+        self.open_orders= {}
         for order in queue_orders:
             self.open_orders[order['orderId']] = (order['contract'],order['order'],order['orderState'])
 
@@ -475,6 +503,7 @@ class IBInterface(EWrapper, EClient):
         super().reqAccountUpdates(True,account)
         queue = self.wrapper_dict[EWrapper.updatePortfolio.__name__]
         return queue
+
 
 def store_historical_data_to_file(symbol, currency, data):
     data = pd.DataFrame(data)
